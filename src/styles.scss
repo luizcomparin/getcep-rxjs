@@ -1,1 +1,47 @@
 /* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;800&display=swap');
+
+
+:root{
+    --c-white:#fff;
+    --c-bg:#121212;
+    --c-app-bg:#1E1E1E;
+    --c-app-bg-hover:#1e1e1ee1;
+	--c-border: #626262
+    --c-gray-line: #dcdde0;
+    --c-text: #666666;
+    --c-text-highlight: #b3b9ff;
+    --c-title: #2e384d;
+    --c-red: #e83f5b;
+    --c-green: #4cd62b;
+    --c-blue: #5965e0;
+    --c-blue-dark: #4953b8;
+    --c-blue-twitter: #2aa9e0;
+
+    --c-background-old:#F2F3F5;
+}
+
+
+html * {
+  font-family: 'Rubik', sans-serif;
+}
+
+
+
+.p-inputtext {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.p-button {
+	padding: 0.50rem 0.8rem !important;
+}
+
+.p-inputtext {
+	width: 100% !important;
+}
