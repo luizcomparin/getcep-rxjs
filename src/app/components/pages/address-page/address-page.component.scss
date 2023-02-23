@@ -1,0 +1,50 @@
+
+
+.occult-menu {
+	position: absolute;
+	top: 0;
+	overflow: hidden;
+	display: none;
+	transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+}
+
+.dropdown_menu-2 {
+	@for $num from 1 to 6 {
+		.dropdown_item-#{$num} {
+			opacity: 0;
+			transform-origin: top center;
+			animation: rotateX 300ms #{$num * 60ms} ease-in-out forwards;
+		}
+	}
+	transform-origin: top center;
+	animation: topToBottom 300ms ease-in-out forwards;
+}
+
+
+@keyframes rotateX {
+  0% {
+    opacity: 0;
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(-20deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateX(0deg);
+  }
+}
+
+@keyframes topToBottom {
+	0% {
+		max-height: 0;
+	}
+	50% {
+	}
+	100% {
+		max-height: 500px;
+	}
+  }
+
