@@ -8,11 +8,16 @@
 
 
 :root{
-    --c-white:#fff;
-    --c-bg:#121212;
+	--c-app-title: #DCDCDC;
+	--c-app-title-old: #0060B9;
+	--c-bg:#121212;
     --c-app-bg:#1E1E1E;
     --c-app-bg-hover:#1e1e1ee1;
-	--c-border: #626262
+	--c-border: #626262;
+	--c-button: #626262;
+	--c-button-hover: #4e4e4e;
+
+    --c-white:#fff;
     --c-gray-line: #dcdde0;
     --c-text: #666666;
     --c-text-highlight: #b3b9ff;
@@ -40,6 +45,34 @@ html * {
 
 .p-button {
 	padding: 0.50rem 0.8rem !important;
+	background-color: var(--c-button) !important;
+	color: white  !important;
+}
+
+.p-button:hover {
+	background-color: var(--c-button-hover) !important;
+}
+
+.go-back-button {
+	background-color: rgb(131, 0, 0) !important;
+}
+
+.go-back-button:hover {
+	background-color: rgb(102, 0, 0) !important;
+}
+
+// .save-button {
+// 	background-color: rgb(37, 131, 0) !important;
+// }
+
+.p-ripple.p-element.p-button.p-component {
+	background-color: rgb(37, 131, 0) !important;
+
+}
+
+.p-ripple.p-element.p-button.p-component:hover {
+	background-color: rgb(37, 102, 0)  !important;
+
 }
 
 .p-inputtext {
