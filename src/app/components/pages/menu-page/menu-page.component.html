@@ -1,0 +1,30 @@
+<div class="w-screen h-screen flex justify-center items-center">
+	<!-- Full-screen div -->
+	<div
+		class="w-[calc(100%-64px)] max-w-[522px] h-screen flex flex-col items-center rounded-lg p-1 bg-[var(--c-bg)]"
+	>
+		<!-- Content -->
+		<div
+			class="w-full my-[60px] text-center justify-center flex text-[var(--c-app-title)] text-[48px] font-semibold"
+		>
+			Address Manager
+			<!-- Title -->
+		</div>
+		<div class="w-full flex flex-col gap-3">
+			<app-cep-card
+				*ngFor="let address of addressList$ | async"
+				[address]="address"
+				class="w-full flex"
+			></app-cep-card>
+		</div>
+
+		<button
+			class="!mt-9"
+			pButton
+			type="button"
+			(click)="redirectToNewAddressPage()"
+		>
+			Novo endereço
+		</button>
+	</div>
+</div>
