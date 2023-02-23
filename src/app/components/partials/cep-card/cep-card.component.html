@@ -1,0 +1,31 @@
+<!-- Card background -->
+<section
+	class="w-full min-w-fit flex h-[78px] px-5 rounded-[5px] cursor-pointer border border-[#626262] bg-[var(--c-app-bg)] hover:bg-[var(--c-app-bg-hover)]"
+	(mouseenter)="hover()"
+	(mouseleave)="notHover()"
+	(click)="goToAddressPage('')"
+>
+	<!-- Normal card text -->
+	<div
+		*ngIf="!this.hovered"
+		class="flex w-full justify-between text-center items-center text-[30px]"
+	>
+		<span>{{ this.address.state }}</span>
+		<span>{{ this.address.cep }}</span>
+	</div>
+
+	<!-- Hovered card text -->
+	<div
+		*ngIf="this.hovered"
+		class="flex w-full justify-between text-center items-center text-[18px] font-light"
+	>
+		<div class="flex flex-col text-start">
+			<span> {{ this.address.street }}</span>
+			<span> {{ this.address.neighborhood }}</span>
+		</div>
+		<div class="flex flex-col text-end">
+			<span>{{ this.address.city }}</span>
+			<span>{{ this.address.state }}</span>
+		</div>
+	</div>
+</section>
